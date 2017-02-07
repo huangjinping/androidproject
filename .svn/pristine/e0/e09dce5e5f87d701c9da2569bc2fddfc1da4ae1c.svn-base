@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="phase_arr">
+        <item>不限</item>
+        <item>高考</item>
+        <item>高中</item>
+        <item>中考</item>
+        <item>初中</item>
+        <item>小升初</item>
+        <item>小学</item>
+    </string-array>
+        <string-array name="subjects_arr">
+        <item>不限</item>
+        <item>语文</item>
+        <item>数学</item>
+        <item>化学</item>
+        <item>初中</item>
+        <item>小升初</item>
+        <item>小学</item>
+    </string-array>
+    <string-array name="grade_arr">
+        <item>不限</item>
+        <item>高一</item>
+        <item>高二</item>
+        <item>高三</item>
+    </string-array>
+    
+    
+    
+    
+    
+    <string-array   name="item_title">
+        <item >主页</item>
+                <item >关注家教</item>
+                <item >我的预约</item>
+                        <item >历史订单</item>
+                
+        
+    </string-array>
+    
+    
+    
+</resources>

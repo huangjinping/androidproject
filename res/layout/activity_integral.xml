@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/layout_headerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+   
+   
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"
+        >
+        
+         <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/details_text"
+        android:text="你好，您的账户积分为"
+        />
+    <TextView 
+        android:id="@+id/txt_integral_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/details_text"
+        android:text="320"
+        android:textSize="18sp"
+        android:textColor="@color/segment_chacked"
+        />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/details_text"
+        android:text="分"
+        />
+    
+    </LinearLayout>
+    
+    
+</LinearLayout>

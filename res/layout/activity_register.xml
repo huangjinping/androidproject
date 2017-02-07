@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/layout_headerview" />
+
+    <RadioGroup
+        android:id="@+id/rag_register_segment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_segment_background"
+        android:orientation="horizontal"
+        android:padding="1dp" >
+
+        <RadioButton
+            android:id="@+id/rab_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_register_segment_child"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textColor="@color/white"
+            android:text="学生注册" />
+
+        <RadioButton
+            android:id="@+id/rab_secend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/segment_chacked"
+            android:background="@drawable/selector_register_segment_child"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="教员注册" />
+    </RadioGroup>
+    
+    <LinearLayout
+        android:id="@+id/layout_register_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        >
+    </LinearLayout>
+</LinearLayout>

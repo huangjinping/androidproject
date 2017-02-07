@@ -1,0 +1,18 @@
+{
+  "businessUser": {
+    "createdDate": "2015-07-23 14:20:45",
+    "createdPerson": "system",
+    "lastModifiedDate": "2015-07-23 14:20:45",
+    "lastModifiedPerson": "system",
+    "confirmNewPassword": null,
+    "disableFlag": "1",
+    "id": "402880124eb98979014eb9923e220004",
+    "loginName": "13611290917",
+    "password": "470c9142e95823f6d1d62dd8995cc47b",
+    "points": 0,
+    "type": "1",
+    "verifyDate": null,
+    "verifyFlag": "1"
+  },
+  "tokenId": "dae96384-670a-4c4b-9d00-90dc4fb5fe4d"
+}

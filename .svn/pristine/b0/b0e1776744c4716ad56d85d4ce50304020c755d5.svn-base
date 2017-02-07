@@ -1,0 +1,17 @@
+package cn.cooperlink.privatetutor.model.dto.mobileInterface;
+
+public class Interface_029Response extends Response {
+	private ResponseBody body;
+
+	public class ResponseBody {
+
+	}
+
+	public ResponseBody getBody() {
+		return body;
+	}
+
+	public void setBody(ResponseBody body) {
+		this.body = body;
+	}
+}

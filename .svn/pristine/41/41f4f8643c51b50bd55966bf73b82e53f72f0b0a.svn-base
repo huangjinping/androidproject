@@ -1,0 +1,124 @@
+/** 
+ * Project Name：privateTutor 
+ * File Name：CommunityActivity.java 
+ * Package Name：cn.cooperlink.privatetutor.community 
+ * Date：2015年7月19日 上午9:12:47 
+ * Copyright (c) 2015, cooperlink.cn All Rights Reserved. 
+ * 北京酷博灵科信息技术有限公司
+ */
+package cn.cooperlink.privatetutor.community;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+import cn.cooperlink.privatetutor.R;
+import cn.cooperlink.privatetutor.base.BaseActivity;
+import cn.cooperlink.privatetutor.view.CircleImageView;
+
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
+
+/**
+ * @Title：社区
+ * @Description：
+ * @Package cn.cooperlink.privatetutor.community
+ * @ClassName CommunityActivity
+ * @author harrishuang
+ * @date 2015年7月19日 上午9:12:47
+ * @version
+ */
+public class CommunityActivity extends BaseActivity {
+	private PullToRefreshListView lisv_community;
+
+	private List<String> dataList;
+
+	@Override
+	protected void onCreate(Bundle arg0) {
+		super.onCreate(arg0);
+		setContentView(R.layout.activity_community);
+		initView();
+	}
+
+	/**
+	 * @Title: initView
+	 * @Description:
+	 */
+
+	private void initView() {
+		lisv_community = (PullToRefreshListView) findViewById(R.id.lisv_community);
+		dataList = new ArrayList<String>();
+
+	}
+
+	/**
+	 * @Title：适配器
+	 * @Description：
+	 * @Package cn.cooperlink.privatetutor.community
+	 * @ClassName CommunityAdapter
+	 * @author harrishuang
+	 * @date 2015年7月19日 上午9:59:07
+	 * @version
+	 */
+	private class CommunityAdapter extends BaseAdapter {
+		private ViewHolder viewHolder;
+
+		@Override
+		public int getCount() {
+			return 0;
+		}
+
+		@Override
+		public Object getItem(int position) {
+			return null;
+		}
+
+		@Override
+		public long getItemId(int position) {
+			return 0;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			if (convertView == null) {
+				viewHolder = new ViewHolder();
+				convertView = LayoutInflater.from(CommunityActivity.this)
+						.inflate(R.layout.item_community, null);
+				viewHolder.img_tutor_icon = (CircleImageView) convertView
+						.findViewById(R.id.img_tutor_icon);
+				viewHolder.txt_tutor_name = (TextView) convertView
+						.findViewById(R.id.txt_tutor_name);
+				viewHolder.txt_title = (TextView) convertView
+						.findViewById(R.id.txt_title);
+				viewHolder.txt_comm_time = (TextView) convertView
+						.findViewById(R.id.txt_comm_time);
+				viewHolder.txt_comm_content = (TextView) convertView
+						.findViewById(R.id.txt_comm_content);
+				viewHolder.txt_comm_save = (TextView) convertView
+						.findViewById(R.id.txt_comm_save);
+				viewHolder.txt_comm_message = (TextView) convertView
+						.findViewById(R.id.txt_comm_message);
+				convertView.setTag(viewHolder);
+			} else {
+				viewHolder = (ViewHolder) convertView.getTag();
+			}
+			return convertView;
+		}
+
+		private class ViewHolder {
+			private CircleImageView img_tutor_icon;
+			private TextView txt_tutor_name;
+			private TextView txt_title;
+			private TextView txt_comm_time;
+			private TextView txt_comm_content;
+			private TextView txt_comm_save;
+			private TextView txt_comm_message;
+		}
+
+	}
+
+}

@@ -1,0 +1,24 @@
+/** 
+ * Project Name：androidproject 
+ * File Name：NetConst.java 
+ * Package Name：cn.cooperlink.privatetutor.http 
+ * Date：2015年7月22日 下午5:08:46 
+ * Copyright (c) 2015, cooperlink.cn All Rights Reserved. 
+ * 北京酷博灵科信息技术有限公司
+ */
+package cn.cooperlink.privatetutor.net;
+
+/**
+ * @Title：
+ * @Description：
+ * @Package cn.cooperlink.privatetutor.http
+ * @ClassName NetConst
+ * @author harrishuang   
+ * @date 2015年7月22日 下午5:08:46
+ * @version 
+ */
+public interface NetConst {
+	
+	public static final  String   HOME="http://192.168.0.146:8080/femp/servlet/dispatcherServlet";
+	public   static  final  String   LOGIN="";
+}

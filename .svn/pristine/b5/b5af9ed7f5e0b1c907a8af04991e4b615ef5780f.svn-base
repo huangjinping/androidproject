@@ -1,0 +1,75 @@
+/** 
+ * Project Name：privateTutor 
+ * File Name：BaseActivity.java 
+ * Package Name：cn.cooperlink.privatetutor.base 
+ * Date：2015年7月16日 下午6:18:24 
+ * Copyright (c) 2015, cooperlink.cn All Rights Reserved. 
+ * 北京酷博灵科信息技术有限公司
+ */
+package cn.cooperlink.privatetutor.base;
+
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
+import android.view.Window;
+import cn.cooperlink.privatetutor.R;
+import cn.cooperlink.privatetutor.dialog.LoadingDialog;
+import cn.cooperlink.privatetutor.net.HttpService;
+import cn.cooperlink.privatetutor.net.OnRequestDataListener;
+
+/**
+ * @Title：
+ * @Description：
+ * @Package cn.cooperlink.privatetutor.base
+ * @ClassName BaseActivity
+ * @author harrishuang   
+ * @date 2015年7月16日 下午6:18:24
+ * @version 
+ */
+public abstract class BaseActivity  extends  FragmentActivity{
+	private LoadingDialog loadingDialog;
+
+	@Override
+	protected void onCreate(Bundle arg0) {
+		// TODO Auto-generated method stub
+		super.onCreate(arg0);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
+	}
+	
+	protected  void  request(String jsonData,OnRequestDataListener  listener){
+		
+		HttpService.submitPostRequest(jsonData, listener);
+		
+	}
+	
+protected  void  request(Context context,String jsonData,OnRequestDataListener  listener){
+		
+		HttpService.submitPostRequest(context,jsonData, listener);
+	}
+
+public void showProgress(String message) {
+	// TODO Auto-generated method stub
+	loadingDialog=new LoadingDialog(this);
+	if (TextUtils.isEmpty(message)) {
+		loadingDialog.setMessage(getString(R.string.progressdialog_title));
+	}else{
+		loadingDialog.setMessage(message);
+	}
+	loadingDialog.setCanceledOnTouchOutside(false);
+	loadingDialog.show();
+}
+
+public void  dismissProgress(){
+	if (loadingDialog!=null) {
+		if (loadingDialog.isShowing()) {
+			if (!this.isFinishing()) {
+				loadingDialog.dismiss();
+				
+			}
+		}
+	}
+}
+	
+}

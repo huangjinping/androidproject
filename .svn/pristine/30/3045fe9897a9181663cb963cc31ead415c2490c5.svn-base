@@ -1,0 +1,31 @@
+/** 
+ * Project Name：androidproject 
+ * File Name：PostingActivity.java 
+ * Package Name：cn.cooperlink.privatetutor.community 
+ * Date：2015年7月22日 下午10:56:13 
+ * Copyright (c) 2015, cooperlink.cn All Rights Reserved. 
+ * 北京酷博灵科信息技术有限公司
+ */
+package cn.cooperlink.privatetutor.community;
+
+import android.os.Bundle;
+import cn.cooperlink.privatetutor.R;
+import cn.cooperlink.privatetutor.base.BaseActivity;
+
+/**
+ * @Title：
+ * @Description：
+ * @Package cn.cooperlink.privatetutor.community
+ * @ClassName PostingActivity
+ * @author harrishuang   
+ * @date 2015年7月22日 下午10:56:13
+ * @version 
+ */
+public class PostingActivity  extends  BaseActivity{
+   @Override
+protected void onCreate(Bundle arg0) {
+	// TODO Auto-generated method stub
+	super.onCreate(arg0);
+	setContentView(R.layout.activity_posting);
+}
+}

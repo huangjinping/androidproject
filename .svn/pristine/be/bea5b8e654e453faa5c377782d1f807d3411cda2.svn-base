@@ -1,0 +1,84 @@
+/** 
+ * Project Name：androidproject 
+ * File Name：PostingActivity.java 
+ * Package Name：cn.cooperlink.privatetutor.community 
+ * Date：2015年7月22日 下午10:56:13 
+ * Copyright (c) 2015, cooperlink.cn All Rights Reserved. 
+ * 北京酷博灵科信息技术有限公司
+ */
+package cn.cooperlink.privatetutor.community;
+
+import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.EditText;
+import cn.cooperlink.privatetutor.R;
+import cn.cooperlink.privatetutor.base.BaseActivity;
+
+/**
+ * @Title：
+ * @Description：
+ * @Package cn.cooperlink.privatetutor.community
+ * @ClassName PostingActivity
+ * @author harrishuang
+ * @date 2015年7月22日 下午10:56:13
+ * @version
+ */
+public class PostingActivity extends BaseActivity {
+	
+	private EditText  edt_posting_title;
+	private  EditText  edt_posting_content;
+	
+	@Override
+	protected void onCreate(Bundle arg0) {
+		super.onCreate(arg0);
+		setContentView(R.layout.activity_posting);
+		initView();
+	}
+	/**
+	 * @Title: initView
+	 * @Description:初始化数据
+	 */
+	private void initView() {
+		edt_posting_title=(EditText)findViewById(R.id.edt_posting_title);
+		edt_posting_content=(EditText)findViewById(R.id.edt_posting_content);
+	}
+	
+	
+	
+	
+	/**
+	 * @Title: checkInput
+	 * @Description:true  校验通过  false  教研不通过
+	 * @return
+	 */
+		
+	private boolean checkInput() {
+		if (TextUtils.isEmpty(edt_posting_title.getText().toString())) {
+			showToast("请输入发帖标题");
+			return  false;
+		}
+		if (TextUtils.isEmpty(edt_posting_content.getText().toString())) {
+			showToast("请输入发帖内容");
+			return  false;
+		}
+		
+		return true;
+	}
+	
+	
+	
+    /**
+     * @Title: onPosting
+     * @Description:
+     * @param v
+     */
+    public  void onPosting(View  v) {
+        if (!checkInput()) {
+			return;
+		}
+        
+        
+        
+	}
+}

@@ -1,0 +1,50 @@
+package cn.cooperlink.privatetutor.model;
+
+/**
+ * BusinessUserLog entity. @author MyEclipse Persistence Tools
+ */
+
+public class BusinessUserLog extends BaseEntity {
+
+	// Fields
+
+	private String id;
+	private String businessUserId;
+	private String content;
+	private String type;
+
+	// Property accessors
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getBusinessUserId() {
+		return this.businessUserId;
+	}
+
+	public void setBusinessUserId(String businessUserId) {
+		this.businessUserId = businessUserId;
+	}
+
+	public String getContent() {
+		return this.content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getType() {
+		return this.type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+}

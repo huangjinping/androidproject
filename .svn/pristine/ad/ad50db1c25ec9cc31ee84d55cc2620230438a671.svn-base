@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/layout_headerview" />
+<EditText
+        android:id="@+id/edt_askquestions_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_posting_title"
+        android:singleLine="true"
+        android:hint="请输入题目..."
+            android:layout_margin="10dp"
+        android:paddingLeft="10dp"
+        android:ems="10" >
+        <requestFocus />
+    </EditText>
+        <EditText
+            android:id="@+id/edt_askquestions_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+        android:background="@drawable/bg_posting_content"
+            android:gravity="top"
+            android:hint="请输入提问内容..."
+            android:lines="7"
+            android:padding="5dp" />
+
+        <TextView
+            android:id="@+id/txt_askquestions_num"
+            style="@style/details_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="10dp"
+            android:padding="5dp"
+            android:text="150字以内" />
+
+        <Button
+            style="@style/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="40dp"
+            android:onClick="onSubmit"
+            android:background="@color/segment_chacked"
+            android:text="提交" />
+    </LinearLayout>
+
+</RelativeLayout>

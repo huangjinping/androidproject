@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background"
+    android:orientation="vertical" >
+        <include 
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+	        layout="@layout/layout_headerview"
+        />
+    
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/che_focus_course"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="年级和学科"
+            android:background="@drawable/selector_focus_checed"
+            android:textColor="@color/white" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/text_hint_color" />
+        <CheckBox
+                        android:id="@+id/che_focue_sorting"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="综合排序"
+                        android:background="@drawable/selector_focus_checed"
+            
+            android:textColor="@color/white" />
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/text_hint_color" />
+
+        <CheckBox
+            android:id="@+id/che_focue_screening"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+                        android:background="@drawable/selector_focus_checed"
+            android:text="筛选"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_hint_color" />
+      <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <com.handmark.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lisv_find_tutor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:divider="@color/color_null"
+            android:dividerHeight="10dp"
+            android:listSelector="@color/color_null"
+            android:scrollbars="@null" >
+        </com.handmark.pulltorefresh.library.PullToRefreshListView>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,174 @@
+package cn.cooperlink.privatetutor.model;
+
+import java.math.BigDecimal;
+
+/**
+ * BusinessOrder entity. @author MyEclipse Persistence Tools
+ */
+
+public class BusinessOrder extends BaseEntity {
+	private String id;
+	private String businessUserStudentId;
+	private String businessUserTeacherId;
+	/** 订单编号 */
+	private String code;
+	/** 课时 */
+	private Integer classHours;
+	/** 课时单价 */
+	private BigDecimal classUnitPrice;
+	/** 课时费用 */
+	private BigDecimal classFee;
+	/** 优惠费用 */
+	private BigDecimal discountFee;
+	/** 补助费用 */
+	private BigDecimal grantFee;
+	/** 学生支付费用 */
+	private BigDecimal studentsPayFee;
+	/** 支付教师费用 */
+	private BigDecimal payTeacherFee;
+	/**
+	 * 状态： 11-创建订单（待教师同意）； 12-教师同意（待支付）； 13-支付完成（订单创建完成）；
+	 * 
+	 * 21-学生确认完成； 22-老师确认完成； 23-订单完成；
+	 * 
+	 * 31-学生申请取消； 32-教师申请取消； 33-取消完成；
+	 * 
+	 * 41-申请退款； 42-退款完成。
+	 */
+	private String state;
+	/** 优惠规则ID */
+	private String businessDiscountRulesId;
+	/** 补助规则ID */
+	private String businessGrantRulesId;
+
+	public String getId() {
+		return this.id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getBusinessUserStudentId() {
+		return this.businessUserStudentId;
+	}
+
+	public void setBusinessUserStudentId(String businessUserStudentId) {
+		this.businessUserStudentId = businessUserStudentId;
+	}
+
+	public String getBusinessUserTeacherId() {
+		return this.businessUserTeacherId;
+	}
+
+	public void setBusinessUserTeacherId(String businessUserTeacherId) {
+		this.businessUserTeacherId = businessUserTeacherId;
+	}
+
+	public String getCode() {
+		return this.code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public Integer getClassHours() {
+		return this.classHours;
+	}
+
+	public void setClassHours(Integer classHours) {
+		this.classHours = classHours;
+	}
+
+	public BigDecimal getClassUnitPrice() {
+		return this.classUnitPrice;
+	}
+
+	public void setClassUnitPrice(BigDecimal classUnitPrice) {
+		this.classUnitPrice = classUnitPrice;
+	}
+
+	public BigDecimal getClassFee() {
+		return this.classFee;
+	}
+
+	public void setClassFee(BigDecimal classFee) {
+		this.classFee = classFee;
+	}
+
+	public BigDecimal getDiscountFee() {
+		return this.discountFee;
+	}
+
+	public void setDiscountFee(BigDecimal discountFee) {
+		this.discountFee = discountFee;
+	}
+
+	public BigDecimal getGrantFee() {
+		return this.grantFee;
+	}
+
+	public void setGrantFee(BigDecimal grantFee) {
+		this.grantFee = grantFee;
+	}
+
+	public BigDecimal getStudentsPayFee() {
+		return this.studentsPayFee;
+	}
+
+	public void setStudentsPayFee(BigDecimal studentsPayFee) {
+		this.studentsPayFee = studentsPayFee;
+	}
+
+	public BigDecimal getPayTeacherFee() {
+		return this.payTeacherFee;
+	}
+
+	public void setPayTeacherFee(BigDecimal payTeacherFee) {
+		this.payTeacherFee = payTeacherFee;
+	}
+
+	/**
+	 * 状态： 11-创建订单（待教师同意）； 12-教师同意（待支付）； 13-支付完成（订单创建完成）；
+	 * 
+	 * 21-学生确认完成； 22-老师确认完成； 23-订单完成；
+	 * 
+	 * 31-学生申请取消； 32-教师申请取消； 33-取消完成；
+	 * 
+	 * 41-申请退款； 42-退款完成。
+	 */
+	public String getState() {
+		return this.state;
+	}
+
+	/**
+	 * 状态： 11-创建订单（待教师同意）； 12-教师同意（待支付）； 13-支付完成（订单创建完成）；
+	 * 
+	 * 21-学生确认完成； 22-老师确认完成； 23-订单完成；
+	 * 
+	 * 31-学生申请取消； 32-教师申请取消； 33-取消完成；
+	 * 
+	 * 41-申请退款； 42-退款完成。
+	 */
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getBusinessDiscountRulesId() {
+		return this.businessDiscountRulesId;
+	}
+
+	public void setBusinessDiscountRulesId(String businessDiscountRulesId) {
+		this.businessDiscountRulesId = businessDiscountRulesId;
+	}
+
+	public String getBusinessGrantRulesId() {
+		return this.businessGrantRulesId;
+	}
+
+	public void setBusinessGrantRulesId(String businessGrantRulesId) {
+		this.businessGrantRulesId = businessGrantRulesId;
+	}
+
+}

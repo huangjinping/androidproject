@@ -1,0 +1,126 @@
+/** 
+ * Project Name：privateTutor 
+ * File Name：MainFragment.java 
+ * Package Name：cn.cooperlink.privatetutor.main.fragment 
+ * Date：2015年7月17日 下午1:35:49 
+ * Copyright (c) 2015, cooperlink.cn All Rights Reserved. 
+ * 北京酷博灵科信息技术有限公司
+ */
+package cn.cooperlink.privatetutor.main.fragment;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
+import android.widget.RelativeLayout;
+import cn.cooperlink.privatetutor.R;
+import cn.cooperlink.privatetutor.base.BaseFragment;
+import cn.cooperlink.privatetutor.community.CommunityActivity;
+import cn.cooperlink.privatetutor.questions.QuestionsActivity;
+import cn.cooperlink.privatetutor.tutor.FindTutorActivity;
+import cn.cooperlink.privatetutor.view.autoscrollview.AutoScrollView;
+
+/**
+ * @Title：首页面的显示
+ * @Description：
+ * @Package cn.cooperlink.privatetutor.main.fragment
+ * @ClassName MainFragment
+ * @author harrishuang   
+ * @date 2015年7月17日 下午1:35:49
+ * @version 
+ */
+public class MainFragment   extends BaseFragment{
+	
+	private AutoScrollView auto_viewpager;
+	private LinearLayout layout_home_bottom;
+	private  RelativeLayout  layout_find_tutor;
+	private  RelativeLayout  layout_into_community;
+	private  RelativeLayout  layout_ask_questions;
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		View   view=inflater.inflate(R.layout.fragment_main, container, false);
+		initView(view);
+		setOnLiteners();
+		return  view;
+	}
+	/**
+	 * @Title: setOnLiteners
+	 * @Description:
+	 */
+	private void setOnLiteners() {
+		layout_find_tutor.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+               Intent intent=new Intent(getActivity(), FindTutorActivity.class);
+               startActivity(intent);
+			}
+		});
+		layout_into_community.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				  Intent intent=new Intent(getActivity(), CommunityActivity.class);
+	               startActivity(intent);
+			}
+		});
+		layout_ask_questions.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				  Intent intent=new Intent(getActivity(), QuestionsActivity.class);
+	               startActivity(intent);				
+			}
+		});
+	}
+	
+	
+	
+	
+	/**
+	 * @Title: initView
+	 * @Description:初始化View
+	 */
+		
+	private void  initView(View  v){
+		auto_viewpager=(AutoScrollView)v.findViewById(R.id.auto_viewpager);
+		layout_home_bottom=(LinearLayout)v.findViewById(R.id.layout_home_bottom);
+		layout_find_tutor=(RelativeLayout)v.findViewById(R.id.layout_find_tutor);
+		layout_into_community=(RelativeLayout)v.findViewById(R.id.layout_into_community);
+		layout_ask_questions=(RelativeLayout)v.findViewById(R.id.layout_ask_questions);
+		DisplayMetrics displayMetrics=new DisplayMetrics();
+		getActivity().getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+//		LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(displayMetrics.widthPixels, displayMetrics.widthPixels);
+		LinearLayout.LayoutParams layoutParams=(LayoutParams) layout_home_bottom.getLayoutParams();
+		layoutParams.width=displayMetrics.widthPixels;
+		layoutParams.height=displayMetrics.widthPixels;
+		layout_home_bottom.setLayoutParams(layoutParams);
+		layout_home_bottom.invalidate();
+	}
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		if (auto_viewpager != null) {
+			auto_viewpager.onRestart();
+		}
+	}
+
+
+
+	@Override
+	public void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		if (auto_viewpager != null) {
+			auto_viewpager.onStop();
+		}
+	}
+	
+}

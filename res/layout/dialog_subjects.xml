@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/segment_chacked" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="年级和科目"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+ <View
+            android:layout_width="100dp"
+            android:layout_centerInParent="true"
+            android:layout_height="100dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+      
+            <ListView
+                                android:id="@+id/liv_phase"
+                android:scrollbars="@null"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:listSelector="@drawable/selector_phase_list"
+                android:layout_weight="1" >
+            </ListView>
+
+            <ListView
+                       android:id="@+id/liv_subjects"
+                android:scrollbars="@null"
+                android:layout_width="0dp"
+                                android:listSelector="@drawable/selector_subjects_list"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </ListView>
+
+            <ListView
+                  android:id="@+id/liv_grade"
+                 android:scrollbars="@null"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+            </ListView>
+        </LinearLayout>
+
+ 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/segment_chacked" >
+
+        <TextView
+            style="@style/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我选好了" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </RelativeLayout>
+
+</LinearLayout>

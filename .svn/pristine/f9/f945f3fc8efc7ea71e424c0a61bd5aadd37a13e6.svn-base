@@ -1,0 +1,33 @@
+/** 
+ * Project Name：privateTutor 
+ * File Name：BaseActivity.java 
+ * Package Name：cn.cooperlink.privatetutor.base 
+ * Date：2015年7月16日 下午6:18:24 
+ * Copyright (c) 2015, cooperlink.cn All Rights Reserved. 
+ * 北京酷博灵科信息技术有限公司
+ */
+package cn.cooperlink.privatetutor.base;
+
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.view.Window;
+
+/**
+ * @Title：
+ * @Description：
+ * @Package cn.cooperlink.privatetutor.base
+ * @ClassName BaseActivity
+ * @author harrishuang   
+ * @date 2015年7月16日 下午6:18:24
+ * @version 
+ */
+public abstract class BaseActivity  extends  FragmentActivity{
+	@Override
+	protected void onCreate(Bundle arg0) {
+		// TODO Auto-generated method stub
+		super.onCreate(arg0);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		
+	}
+	
+}

@@ -1,0 +1,13 @@
+<resources>
+
+    <string name="app_name">privateTutor</string>
+
+    <string name="register_phone">请输入手机号</string>
+    <string name="verification_code">请输入验证码</string>
+    <string name="set_password">设置密码（6-20位字符）</string>
+    <string  name="confirm_password">请再次确认密码</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+    <string name="enter_register">点击-注册，即表示您同意</string>
+        <string name="registration_agreement">《优等生平台用户隐私协议》</string>
+</resources>
